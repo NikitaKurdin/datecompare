@@ -9,5 +9,10 @@
             "type": "git",
             "url": "https://github.com/NikitaKurdin/datecompare.git"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "NikitaKurdin\\DateCompare\\": "src/"
+        }
+    },
 }
