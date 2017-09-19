@@ -1,11 +1,6 @@
 <?php
 
-namespace DateCompare;
-
-if (!defined('Engine'))
-{
-    exit();
-} 
+namespace NikitaKurdin\DateCompare;
 
 /*
 Возможные форматы дат:

@@ -1,5 +1,5 @@
 {
-    "name": "NikitaKurdin/DateCompare",
+    "name": "NikitaKurdin/datecompare",
     "description": "Класс для сравнения 2-х дат разных форматов",
     "require": {
         "php":">=5.3.0"
