@@ -18,8 +18,8 @@ namespace NikitaKurdin\DateCompare;
 
 class DateCompare
 { 
-    PUBLIC $date_separate = ".";
-
+    public $date_separate = ".";
+    
     /**
      * [ConvertFormate метод определяет формат даты и переводит ёё в секунды]
      * @param string $data [Дата различного формата]
@@ -204,5 +204,3 @@ class DateCompare
         }
     }
 }
-
-?>

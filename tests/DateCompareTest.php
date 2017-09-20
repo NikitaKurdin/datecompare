@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use \NikitaKurdin\DateCompare\DateCompare;
+use NikitaKurdin\DateCompare\DateCompare;
 
 class DateCompareTest extends TestCase
 {
@@ -72,5 +72,3 @@ class DateCompareTest extends TestCase
 	    }
     }
 }
-
-?>
