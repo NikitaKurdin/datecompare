@@ -35,7 +35,7 @@ class DateCompare
         $date = 0;
 
         // Проверяем является ли первый элемент массива - временем
-        if (preg_match("#:#", $data_arr[0]) OR strlen($data_arr[0]) == 2)
+        if (preg_match("#:#", $data_arr[0]) OR strlen($data_arr[0]) <= 2)
         {
             $time = $this->ConvertTime($data_arr[0]);
 
@@ -62,6 +62,7 @@ class DateCompare
     {
         $seconds = 0;
         $data_arr = explode(":", $data);
+        $data_arr = array_map("intval", $data_arr);
 
         $hour = 0;
         $minute = 0;
@@ -138,15 +139,24 @@ class DateCompare
             $year_tmp = $data_arr[0];
         }
 
-
         if ($day_tmp)
         {
+            if ($day_tmp < 1 OR $day_tmp > 31)
+            {
+                exit('Wrong day number: '.$day_tmp);
+            }
+
             $day_tmp -= 1; // Чтобы при умножении не получили +1 день
             $day = $day_tmp*86400; // Получаем кол-во дней в секундах
         }
 
         if ($month_tmp)
         {
+            if ($month_tmp < 1 OR $month_tmp > 12)
+            {
+                exit('Wrong month number: '.$month_tmp);
+            }
+
             // Получаем год, чтобы можно было определить кол-во дней в месяцах до указанного
             if ($year_tmp)
             {
