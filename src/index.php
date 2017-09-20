@@ -16,7 +16,7 @@ $DateCompare = new DateCompare;
 $date1 = "02.05.2008";
 $date2 = "05.2008";
 
-if (isset($argv))
+if (isset($argv[1]) AND isset($argv[2]))
 {
 	$date1 = $argv[1];
 	$date2 = $argv[2];
